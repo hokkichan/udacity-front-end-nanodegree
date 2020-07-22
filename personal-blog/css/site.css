@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container-card {
+  border: 1px solid grey;
+  width: 30%;
+  margin: 15px;
+  padding: 15px;
+}
+
+.container-wider-card {
+  border: 3px solid grey;
+  width: 35%;
+  margin: 15px;
+  padding: 15px;
+}
+
+.container > .container-card> .world {
+  color: #02B3E4;
+  font-weight: bold;
+}
+
+.container > .container-wider-card> .design {
+  color: #15C26B;
+  font-weight: bold;
+}
+
+h1 {
+  color: grey;
+}
+
+.container-card:hover, .container-wider-card:hover {
+  transform: scale(1.05);
+  transition: transform .5s;
+}
