@@ -1,20 +1,22 @@
 .container {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .container-card {
-  border: 1px solid grey;
+  border: 2px solid grey;
   width: 30%;
   margin: 15px;
   padding: 15px;
+  border-radius: 5px;
 }
 
 .container-wider-card {
-  border: 3px solid grey;
+  border: 2px solid grey;
   width: 35%;
   margin: 15px;
   padding: 15px;
+  border-radius: 5px;
 }
 
 .container > .container-card> .world {
@@ -27,11 +29,46 @@
   font-weight: bold;
 }
 
+.container > .container-card> .date {
+  color: grey;
+  font-weight: bold;
+}
+
+.container > .container-wider-card> .date {
+  color: grey;
+  font-weight: bold;
+}
+
 h1 {
   color: grey;
+  text-decoration: underline;
+  text-align: center;
+}
+
+h2 {
+  color: black;
+  margin-bottom: -15px;
 }
 
 .container-card:hover, .container-wider-card:hover {
-  transform: scale(1.05);
-  transition: transform .5s;
+  transform: scale(1.03);
+  transition-delay: 0.5s;
+  transition: transform 0.2s;
+  border: 3px solid grey;
+}
+
+a {
+  color: #02B3E4;
+}
+
+footer { 
+  text-align: center;
+  color: grey;
+}
+
+.footer-container {
+  display: inline-block;
+  background-color: #F7F7F8;
+  width: 90%;
+  margin-left: 50px;
 }
