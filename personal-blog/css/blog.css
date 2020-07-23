@@ -2,7 +2,7 @@
   font-family: 'Roboto', sans-serif;
   color: #454F58;
   line-height: 1.5;
-  margin-left: 25px;
+  margin-left: 35px;
 }
 
 code, strong {
@@ -12,7 +12,6 @@ code, strong {
 
 
 blockquote {
-
   border-left: 4px solid #02B3E4;
   padding-top: 25px;
   padding-bottom: 25px;
@@ -26,8 +25,12 @@ blockquote {
   height: 250px;
   background-color: grey;
   text-align: center;
-  color: white;
   font-size: 2em;
+}
+
+#banner-text {
+  padding-top: 105px;
+  color: white;
 }
 
 .avatar-head {
@@ -42,11 +45,15 @@ blockquote {
 #placeholder {
   margin: 0;
   color: white;
-  padding-top: 25px;
+  padding-top: 35px;
   padding-left: -15px;
   text-align: center;
 }
 
+ul, ol {
+  padding-left: 0;
+}
+
 li {
-  margin-left: 0;
+  padding-left: 5px;
 }
