@@ -10,7 +10,7 @@ a {
 }
 
 button {
-  padding: 8px;
+  padding: 5px;
   border: 1px solid #454F58;;
   border-radius: 5px;
 }
@@ -40,8 +40,7 @@ button {
 }
 
 .avatar-description {
-  margin: 0;
-  padding-top: 10px;
+  margin: -5px 0 0 0;
   font-size: 0.9em;
 }
 
@@ -140,5 +139,10 @@ li {
 i {
   color: #454F58;
   font-size: 2em;
-  padding: 0 15px 0 15px;
+  padding: 0 15px 0 0px;
+}
+
+#social-media {
+  margin-top: -5px;
+  margin-left: -15px;
 }
