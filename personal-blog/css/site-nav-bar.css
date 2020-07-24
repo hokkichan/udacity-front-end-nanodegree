@@ -1,0 +1,14 @@
+nav {
+  width: 90%;
+  text-align: right;
+}
+
+#search {
+  text-decoration: none;
+  margin-right: 5%;
+}
+
+#subscribe {
+  margin-left: 15%;
+  text-align: left;
+}

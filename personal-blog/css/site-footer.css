@@ -1,0 +1,10 @@
+footer { 
+  text-align: center;
+  color: grey;
+}
+
+.footer-container {
+  display: inline-block;
+  background-color: #C8CDD2;
+  width: 80%;
+}
