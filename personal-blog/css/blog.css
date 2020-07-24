@@ -26,22 +26,17 @@ button {
   margin: -15px 0 0 25px;
 }
 
-#placeholder {
-  margin: 0;
-  color: white;
-  padding-top: 25px;
-  padding-left: -15px;
-  text-align: center;
+.avatar-head {
+  display: inline-block;
+  margin: 0px;
 }
 
-.avatar-head {
-  width: 70px;
-  height: 70px;
-  display: inline-block;
-  background-color: #02B3E4;
+#avatar {
+  width: 135px;
+  height: 135px;
+  border: solid #02B3E4 4px;
   border-radius: 50%;
-  margin: 10px 0px 0px 0px;
-  line-height: 1;
+  margin: 0px;
 }
 
 .avatar-description {
@@ -53,11 +48,20 @@ button {
 #author-name {
   color: #02B3E4;
   margin-left: 15px;
+  font-size: 1.1em;
+  font-weight: bold;
 }
 
 #author-description {
   margin-left: 15px;
   margin-top: -15px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+#short-bio {
+  margin-left: 15px;
+  margin-top: 5px;
 }
 
 .banner {
@@ -131,4 +135,10 @@ ul, ol {
 
 li {
   padding-left: 5px;
+}
+
+i {
+  color: #454F58;
+  font-size: 2em;
+  padding: 0 15px 0 15px;
 }
