@@ -55,28 +55,45 @@
 .banner {
   width: 1000px;
   height: 250px;
-  background-color: #6D7780;
   text-align: center;
   font-size: 2em;
   display: grid;
-  grid-gap: 0px;
+  grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr;
+  grid-template-rows: auto;
+  grid-template-areas: "grid-image grid-banner grid-banner grid-banner grid-banner"
+                       "grid-image grid-banner grid-banner grid-banner grid-banner"
+                       "grid-image grid-banner grid-banner grid-banner grid-banner"
+                       "grid-image grid-banner grid-banner grid-banner grid-banner"
+                       "grid-image grid-banner grid-banner grid-banner grid-banner"
+                       "grid-caption grid-banner grid-banner grid-banner grid-banner";
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  border: 2px solid #454F58;
 }
 
 #banner-text {
   padding-top: 75px;
-  margin-bottom: 0;
-  color: white;
-  grid-column-start: 2;
-  grid-column-end: 4;
+  margin: 0;
+  color: #454F58;
   text-align: center;
-  margin-left: -125px;
+  grid-area: grid-banner;
 }
 
 #banner-img {
   margin-left: 0px;
-  height: 250px;
-  grid-column-start: 1;
-  grid-column-end: 2;
+  height: 200px;
+  grid-area: grid-image;
+}
+
+#img-text {
+  padding: 0px;
+  background-color: white;
+  color: #454F58;
+  margin-left: 0px;
+  font-size: 0.6em;
+  grid-area: grid-caption;
+  margin-top: 5px;
+  font-style: italic;
 }
 
 .italic {
