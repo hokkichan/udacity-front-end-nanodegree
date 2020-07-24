@@ -5,26 +5,9 @@
   margin-left: 30px;
 }
 
-head {
-  margin-top: 105px;
-}
-
 #back-to-blog {
   color: #02B3E4;
   text-decoration: none;
-}
-
-code, strong {
-  margin: 0;
-}
-
-blockquote {
-  border-left: 4px solid #02B3E4;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  padding-left: 15px;
-  background-color: #F7F7F8;
-  width: 70%;
 }
 
 .head-wrapper {
@@ -33,17 +16,13 @@ blockquote {
   margin: -15px 0 0 25px;
 }
 
-.banner {
-  width: 1000px;
-  height: 250px;
-  background-color: grey;
-  text-align: center;
-  font-size: 2em;
-}
-
-#banner-text {
-  padding-top: 105px;
+#placeholder {
+  margin: 0;
+  font-size: 0.7em;
   color: white;
+  padding-top: 28px;
+  padding-left: -15px;
+  text-align: center;
 }
 
 .avatar-head {
@@ -73,13 +52,30 @@ blockquote {
   margin-top: -15px;
 }
 
-#placeholder {
-  margin: 0;
-  font-size: 0.7em;
-  color: white;
-  padding-top: 28px;
-  padding-left: -15px;
+.banner {
+  width: 1000px;
+  height: 250px;
+  background-color: grey;
   text-align: center;
+  font-size: 2em;
+}
+
+#banner-text {
+  padding-top: 105px;
+  color: white;
+}
+
+code, strong {
+  margin: 0;
+}
+
+blockquote {
+  border-left: 4px solid #02B3E4;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 15px;
+  background-color: #F7F7F8;
+  width: 70%;
 }
 
 ul, ol {
