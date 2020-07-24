@@ -5,6 +5,16 @@
   margin-left: 30px;
 }
 
+a {
+  margin: 0px;
+}
+
+button {
+  padding: 8px;
+  border: 1px solid #454F58;;
+  border-radius: 5px;
+}
+
 #back-to-blog {
   color: #02B3E4;
   text-decoration: none;
@@ -69,6 +79,7 @@
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   border: 2px solid #454F58;
+  border-radius: 15px;
 }
 
 #banner-text {
@@ -83,6 +94,7 @@
   margin-left: 0px;
   height: 200px;
   grid-area: grid-image;
+  border-radius: 15px;
 }
 
 #img-text {
