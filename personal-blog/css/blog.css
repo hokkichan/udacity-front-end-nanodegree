@@ -55,14 +55,33 @@
 .banner {
   width: 1000px;
   height: 250px;
-  background-color: grey;
+  background-color: #6D7780;
   text-align: center;
   font-size: 2em;
+  display: grid;
+  grid-gap: 0px;
 }
 
 #banner-text {
-  padding-top: 105px;
+  padding-top: 75px;
+  margin-bottom: 0;
   color: white;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  text-align: center;
+  margin-left: -125px;
+}
+
+#banner-img {
+  margin-left: 0px;
+  height: 250px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.italic {
+  font-style: italic;
+  font-weight: bold;
 }
 
 code, strong {
