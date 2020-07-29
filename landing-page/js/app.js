@@ -55,3 +55,11 @@
 // Set sections as active
 
 
+const headingHover = document.querySelector('a');
+
+function onHover() {
+  console.log('The heading was clicked!'); 
+}
+
+headingHover.addEventListener('mouseover', onHover);
+headingHover.removeEventListener('mouseout', onHover);
