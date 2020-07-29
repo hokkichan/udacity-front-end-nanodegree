@@ -31,6 +31,12 @@ button {
   margin: 0px;
 }
 
+.quote::before {
+  content: "\201c";
+  font-size: 40px;
+  color: #02B3E4;
+}
+
 #avatar {
   width: 135px;
   height: 135px;
