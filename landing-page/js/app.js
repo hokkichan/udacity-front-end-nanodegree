@@ -55,31 +55,33 @@
 // Set sections as active
 
 
-//const headingHover = document.querySelector('a');
 
-//function onHover() {
-//  console.log('The heading was clicked!'); 
-//}
 
-//headingHover.addEventListener('mouseover', onHover);
-//headingHover.removeEventListener('mouseout', onHover);
+const navlinks = document.getElementsByTagName('nav')[0].getElementsByTagName('a');
 
-function changeNav(){
-  //console.clear();
-  //console.log("Win Y: "+window.scrollY);
-  var navlinks = document.getElementsByTagName('nav')[0].getElementsByTagName('a');
+
+
+window.onscroll = function changeNav() {
+  
   var sections = document.getElementsByTagName('main')[0].getElementsByTagName('section');
-  for (var a=0; a<sections.length; a++) {
-    var sectionTop = sections[a].offsetTop;
-    var sectionBot = sections[a].offsetTop+sections[a].offsetHeight;
+  for (var i=0; i<sections.length; i++) {
+    var sectionTop = sections[i].offsetTop;
+    var sectionBot = sections[i].offsetTop+sections[i].offsetHeight;
     if (window.scrollY >= sectionTop && window.scrollY < sectionBot) {
-    //console.log(sections[a].id+': current');
-    navlinks[a].classList.add('current');
+    navlinks[i].classList.add('current');
     } else {
-    //console.log(sections[a].id+':');
-    navlinks[a].classList.remove('current');
+    navlinks[i].classList.remove('current');
     }
   }
 }
 
-window.addEventListener('onscroll', changeNav());
+
+//document.addEventListener('onscroll', changeNav);
+
+//
+function onHover() {
+  console.log('The heading was clicked!'); 
+}
+
+//document.addEventListener('mouseover', onHover);
+//headingHover.removeEventListener('mouseout', onHover);

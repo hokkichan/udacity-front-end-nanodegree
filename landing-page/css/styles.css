@@ -89,9 +89,8 @@ section {
 }
 
 nav a.current {
-    background: #333;
+    background: red;
     color: #fff;
-    transition: ease 0.3s all;
 }
 
 /* Header Styles */
