@@ -55,11 +55,31 @@
 // Set sections as active
 
 
-const headingHover = document.querySelector('a');
+//const headingHover = document.querySelector('a');
 
-function onHover() {
-  console.log('The heading was clicked!'); 
+//function onHover() {
+//  console.log('The heading was clicked!'); 
+//}
+
+//headingHover.addEventListener('mouseover', onHover);
+//headingHover.removeEventListener('mouseout', onHover);
+
+function changeNav(){
+  //console.clear();
+  //console.log("Win Y: "+window.scrollY);
+  var navlinks = document.getElementsByTagName('nav')[0].getElementsByTagName('a');
+  var sections = document.getElementsByTagName('main')[0].getElementsByTagName('section');
+  for (var a=0; a<sections.length; a++) {
+    var sectionTop = sections[a].offsetTop;
+    var sectionBot = sections[a].offsetTop+sections[a].offsetHeight;
+    if (window.scrollY >= sectionTop && window.scrollY < sectionBot) {
+    //console.log(sections[a].id+': current');
+    navlinks[a].classList.add('current');
+    } else {
+    //console.log(sections[a].id+':');
+    navlinks[a].classList.remove('current');
+    }
+  }
 }
 
-headingHover.addEventListener('mouseover', onHover);
-headingHover.removeEventListener('mouseout', onHover);
+window.addEventListener('onscroll', changeNav());
