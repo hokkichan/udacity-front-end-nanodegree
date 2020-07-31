@@ -54,16 +54,10 @@
 
 // Set sections as active
 
-
-
-
-const navlinks = document.getElementsByTagName('nav')[0].getElementsByTagName('a');
-
-
+const navlinks = document.getElementsByTagName('nav')[0].getElementsByTagName('li');
+const sections = document.getElementsByTagName('main')[0].getElementsByTagName('section');
 
 window.onscroll = function changeNav() {
-  
-  var sections = document.getElementsByTagName('main')[0].getElementsByTagName('section');
   for (var i=0; i<sections.length; i++) {
     var sectionTop = sections[i].offsetTop;
     var sectionBot = sections[i].offsetTop+sections[i].offsetHeight;
@@ -75,13 +69,3 @@ window.onscroll = function changeNav() {
   }
 }
 
-
-//document.addEventListener('onscroll', changeNav);
-
-//
-function onHover() {
-  console.log('The heading was clicked!'); 
-}
-
-//document.addEventListener('mouseover', onHover);
-//headingHover.removeEventListener('mouseout', onHover);

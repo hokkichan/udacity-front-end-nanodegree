@@ -88,9 +88,9 @@ section {
     transition: ease 0.3s all;
 }
 
-nav a.current {
-    background: red;
-    color: #fff;
+li.current {
+    background: #51a2ad;
+    color: white;
 }
 
 /* Header Styles */
