@@ -90,7 +90,7 @@ section {
 
 li.current {
     background: #51a2ad;
-    color: white;
+    color: white !important;
 }
 
 /* Header Styles */
