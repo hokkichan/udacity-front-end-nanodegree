@@ -22,7 +22,7 @@ app.use(express.static('website'));
 
 //Post route
 const data = [];
-app.post('/add', postData;
+app.post('/add', postData)
 
 function postData (req, res){
   projectData['date'].push(req.body.date);
