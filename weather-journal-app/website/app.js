@@ -1,7 +1,7 @@
 /* Global Variables */
 //let baseURL ="api.openweathermap.org/data/2.5/weather?zip={zip code},{country code}&appid={your api key}"
-let baseURL ="api.openweathermap.org/data/2.5/weather?zip=98101&appid="
-let apiKey = "c02dfeec9e7239aa6b0362b7add9d80c";
+let baseURL ="api.openweathermap.org/data/2.5/weather?zip="
+let key = "&appid=c02dfeec9e7239aa6b0362b7add9d80c";
 
 //Event listener
 document.getElementById("generate").addEventListener('click', performAction);
@@ -13,18 +13,25 @@ let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
 
 //
 function performAction(e){
-const newZip = document.getElementById('zip').value;
-getAnimal(baseURL,newAnimal, apiKey)
-
+  const newZip = document.getElementById('zip').value;
+  const feelings = document.getElementById('feelings').value;
+  getWeather(baseURL, newZip, key)
+    .then(function (userData) {
+      // add data to POST request
+      postData('/add', { date: newDate, temp: userData.main.temp, feelings })
+      }).then(function (newData) {
+      // call updateUI to update browser content
+      updateUI()
+    })
 }
-const getAnimal = async (baseURL, animal, key)=>{
 
-  const res = await fetch(baseURL+animal+key)
+const getWeather = async (baseURL, newZip, key)=>{
+
+  const res = await fetch(baseURL+newZip+key);
   try {
-
-    const data = await res.json();
-    console.log(data)
-    return data;
+    const userData = await res.json();
+    //console.log(data)
+    return userData;
   }  catch(error) {
     console.log("error", error);
     // appropriately handle the error
@@ -33,25 +40,40 @@ const getAnimal = async (baseURL, animal, key)=>{
 
 //Post data
 
-const postData = async ( url = '', data = {})=>{
-    console.log(data);
-      const response = await fetch(url, {
+const postData = async (url = '', data = {})=>{
+  //console.log(data);
+      const req = await fetch(url, {
       method: 'POST', 
       credentials: 'same-origin',
       headers: {
           'Content-Type': 'application/json',
       },
      // Body data type must match "Content-Type" header        
-      body: JSON.stringify(projectData), 
+      body: JSON.stringify({
+        date: data.date,
+        temp: data.temp,
+        content: data.content
+      }), 
     });
 
       try {
-        const newData = await response.json();
+        const newData = await req.json();
         console.log(newData);
-        return newData;
+        //return newData;
       }catch(error) {
       console.log("error", error);
       }
   }
 
-postData('/add', {answer:42});
+const updateUI = async () => {
+  const request = await fetch('/all');
+  try {
+    const allData = await request.json()
+    document.getElementById('date').innerHTML = allData.date;
+    document.getElementById('temp').innerHTML = allData.temp;
+    document.getElementById('content').innerHTML = allData.content;
+  }
+  catch (error) {
+    console.log("error", error);
+  }
+};
