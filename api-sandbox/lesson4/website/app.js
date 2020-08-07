@@ -15,7 +15,7 @@ getAnimal(baseURL,newAnimal, apiKey)
 const getAnimal = async (baseURL, animal, key)=>{
 
   //const res = await fetch(baseURL+animal+key)
-  const res = await fetch('fakeAnimalData')
+  const res = await fetch('fakeAnimal')
   try {
 
     const data = await res.json();
