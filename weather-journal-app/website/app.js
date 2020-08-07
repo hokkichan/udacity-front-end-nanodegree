@@ -1,6 +1,6 @@
 /* Global Variables */
 //let baseURL ="api.openweathermap.org/data/2.5/weather?zip={zip code},{country code}&appid={your api key}"
-let baseURL ="api.openweathermap.org/data/2.5/weather?zip="
+let baseURL ="https://api.openweathermap.org/data/2.5/weather?zip="
 let key = "&appid=c02dfeec9e7239aa6b0362b7add9d80c";
 
 //Event listener
@@ -18,7 +18,10 @@ function performAction(e){
   getWeather(baseURL, newZip, key)
     .then(function (userData) {
       // add data to POST request
-      postData('/add', { date: newDate, temp: userData.main.temp, feelings })
+      postData('/add', {
+        date: newDate, 
+        temp: userData.main.temp, 
+        feelings })
       }).then(function (newData) {
       // call updateUI to update browser content
       updateUI()
