@@ -12,7 +12,8 @@ let d = new Date();
 let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
 
 //
-function performAction(e){
+function performAction(event){
+  event.preventDefault();
   const newZip = document.getElementById('zip').value;
   const feelings = document.getElementById('feelings').value;
   getWeather(baseURL, newZip, key)
@@ -55,7 +56,7 @@ const postData = async (url = '', data = {})=>{
       body: JSON.stringify({
         date: data.date,
         temp: data.temp,
-        content: data.content
+        content: data.feelings
       }), 
     });
 
