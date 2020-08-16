@@ -17,12 +17,9 @@ function performAction(event){
   const newZip = document.getElementById('zip').value;
   const feelings = document.getElementById('feelings').value;
   getWeather(baseURL, newZip, key)
-    .then(function (userData) {
+    .then(function (data) {
       // add data to POST request
-      postData('/add', {
-        date: newDate, 
-        temp: userData.main.temp, 
-        feelings })
+      postData('/add', {temperature: data.main.temp, date: newDate,userResponse: feelings})
       }).then(function (newData) {
       // call updateUI to update browser content
       updateUI()
