@@ -20,23 +20,26 @@ app.use(cors());
 // Initialize the main project folder
 app.use(express.static('website'));
 
+//Get route
+app.get ('/allData', (req, res) => {
+    res.send(projectData);
+    console.log(projectData);
+});
+
 //Post route
 const data = [];
-app.post('/add', postData)
 
-function postData (req, res){
-  projectData['date'] = req.body.date;
-  projectData['temp'] = req.body.temp;
-  projectData['content'] = req.body.content;
-  res.send(projectData);
-}
-
-//Get route
-app.get('/all', getData);
-
-function getData (req, res) {
-  res.send(projectData);
-};
+app.post('/addData', (req, res) => {
+    console.log(req.body);
+    const newEntry = {
+      temp: req.body.temp,
+      date: req.body.date,
+     content: req.body.content
+    }
+    projectData = newEntry;
+    res.send(projectData);
+    console.log(projectData);
+});
 
 // Setup Server
 
@@ -46,8 +49,3 @@ const server = app.listen(port, listening);
 function listening() {
   console.log(`running on localhost: ${port}`);
 };
-
-
-
-
-
