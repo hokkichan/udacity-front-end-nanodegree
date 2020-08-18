@@ -34,7 +34,7 @@ app.post('/addData', (req, res) => {
     const newEntry = {
       temp: req.body.temp,
       date: req.body.date,
-     content: req.body.content
+      content: req.body.content
     }
     projectData = newEntry;
     res.send(projectData);
