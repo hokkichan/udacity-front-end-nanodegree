@@ -27,13 +27,13 @@ body{
 .entry{
   background: rgba(59, 74, 107, .4);
   margin-top: -120px;
-  height: 220px;
+  height: 180px;
   border-radius: 5px;
   padding: 5px;
 }
 
-#entryHolder, #date, #temp, #content {
-  font-size: 0.9em;
+#entryHolder, #date, #temp, #content, #city {
+  padding-bottom: 2px;
 }
 
 #zip{
