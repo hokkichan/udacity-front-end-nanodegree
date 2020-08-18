@@ -9,7 +9,7 @@ document.getElementById("generate").addEventListener('click', performAction);
 
 // Create a new date instance dynamically with JS
 let d = new Date();
-let newDate = (d.getMonth()+1)+'.'+ d.getDate()+'.'+ d.getFullYear();
+let newDate = d.getDate() +'.'+ (d.getMonth()+1) +'.'+ d.getFullYear();
 
 //
 function performAction(event){
@@ -19,7 +19,7 @@ function performAction(event){
     .then(function (data) {
       // add data to POST request
       console.log(data);
-      postData('/addData', {date: newDate, temp: data.main.temp, content: feelings})
+      postData('/addData', {date: newDate, name: data.name, temp: data.main.temp, content: feelings})
       }).then(function (newData) {
       // call updateUI to update browser content
       updateUI()
@@ -67,7 +67,8 @@ const updateUI = async () => {
     const allData = await request.json()
     console.log(allData);
     document.getElementById('date').innerHTML = `Date: ${allData.date}`;
-    document.getElementById('temp').innerHTML = `Temperature: ${allData.temp}`;
+    document.getElementById('city').innerHTML = `City: ${allData.name}`;
+    document.getElementById('temp').innerHTML = `Temperature: ${allData.temp.toFixed(1)}&#176C`;
     document.getElementById('content').innerHTML = `Feelings: ${allData.content}`;
   }
   catch (error) {

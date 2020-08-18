@@ -32,8 +32,9 @@ const data = [];
 app.post('/addData', (req, res) => {
     console.log(req.body);
     const newEntry = {
-      temp: req.body.temp,
       date: req.body.date,
+      name: req.body.name,
+      temp: req.body.temp,
       content: req.body.content
     }
     projectData = newEntry;
