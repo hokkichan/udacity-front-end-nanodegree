@@ -39,7 +39,7 @@ app.post('/addData', (req, res) => {
     }
     projectData = newEntry;
     res.send(projectData);
-    console.log(projectData);
+    //console.log(projectData);
 });
 
 // Setup Server
