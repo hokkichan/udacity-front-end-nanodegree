@@ -10,6 +10,7 @@ let newDate = d.getDate() +'.'+ (d.getMonth()+1) +'.'+ d.getFullYear();
 //Event listener
 document.getElementById("generate").addEventListener('click', performAction);
 
+//Callback function called by event listener
 function performAction(event){
   const newZip = document.getElementById('zip').value;
   const feelings = document.getElementById('feelings').value;
